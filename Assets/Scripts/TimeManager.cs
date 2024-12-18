@@ -17,7 +17,11 @@ public class TimeManager : MonoBehaviour
 
     public PlayerAnimation PlayerAnimation;
 
+    public GameObject StopWall;
+
     public Text TimeText;
+
+    public bool GameEnd;
 
     private void Start()
     {
@@ -40,8 +44,11 @@ public class TimeManager : MonoBehaviour
 
             //Time.timeScale = 0;
 
-            //SceneManager.LoadScene(1);
+            StopWall.SetActive(true);
+
             PlayerAnimation.Victory();
+
+            GameEnd = true;
         }
     }
 }

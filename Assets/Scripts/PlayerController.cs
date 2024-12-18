@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform bulletSpawn;
     [SerializeField] float bulletSpeed;
 
+    public TimeManager timeManager;
+
     private CharacterController characterController;
 
     private void Start()
@@ -23,7 +25,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        handdleControl();
+        if (!timeManager.GameEnd)
+        {
+            handdleControl();
+        }
     }
 
     private void handdleControl()
