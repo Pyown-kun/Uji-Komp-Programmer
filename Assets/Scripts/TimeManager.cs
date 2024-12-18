@@ -13,6 +13,7 @@ public class TimeManager : MonoBehaviour
     public Camera RanderCamera;
 
     public GameObject InGameUI;
+    public GameObject GameOver;
 
     public PlayerAnimation PlayerAnimation;
 
@@ -34,9 +35,12 @@ public class TimeManager : MonoBehaviour
             MainCamera.enabled = false;
             RanderCamera.enabled = true;
 
-            InGameUI.active = false;
+            InGameUI.SetActive(false);
+            GameOver.SetActive(true);
 
-            SceneManager.LoadScene(1);
+            //Time.timeScale = 0;
+
+            //SceneManager.LoadScene(1);
             PlayerAnimation.Victory();
         }
     }

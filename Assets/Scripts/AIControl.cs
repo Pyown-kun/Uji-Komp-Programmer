@@ -18,11 +18,5 @@ public class AIControl : MonoBehaviour
         agent.SetDestination(target.position);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "wall")
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 }
