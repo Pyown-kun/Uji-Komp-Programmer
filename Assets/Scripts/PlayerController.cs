@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.U2D;
@@ -21,6 +22,11 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
+    {
+        handdleControl();
+    }
+
+    private void handdleControl()
     {
         Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
 
@@ -51,7 +57,5 @@ public class PlayerController : MonoBehaviour
         {
             PlayerAnimation.Idle();
         }
-            Debug.Log(move);
-
     }
 }

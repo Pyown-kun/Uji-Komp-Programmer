@@ -15,7 +15,8 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        TextScore.text = "Score: " + currentScore;
+        //TextScore.text = "Score: " + currentScore;
+        TextScore.text = "Score: Error";
     }
 
     public void AddScore(int score)

@@ -9,6 +9,11 @@ public class TimeManager : MonoBehaviour
     private float time;
     [SerializeField] private float timer;
 
+    public Camera MainCamera;
+    public Camera RanderCamera;
+
+    public GameObject InGameUI;
+
     public PlayerAnimation PlayerAnimation;
 
     public Text TimeText;
@@ -26,6 +31,11 @@ public class TimeManager : MonoBehaviour
 
         if (timer <= 0)
         {
+            MainCamera.enabled = false;
+            RanderCamera.enabled = true;
+
+            InGameUI.active = false;
+
             SceneManager.LoadScene(1);
             PlayerAnimation.Victory();
         }

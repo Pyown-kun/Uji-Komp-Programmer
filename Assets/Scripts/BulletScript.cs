@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
 
-    [SerializeField] private ScoreManager ScoreManager;
+    public ScoreManager ScoreManager;
     [SerializeField] float bulletLifeTime = 3f;
 
     private void Update()
